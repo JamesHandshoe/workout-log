@@ -20,6 +20,11 @@ app.use('/api/user', require('./routes/user'));
 //login route to sessions.js to authenticate a session
 app.use('/api/login', require('./routes/session'));
 
+//definitions route
+app.use('/api/definition', require('./routes/definition'));
+
+// log route
+app.use('/api/log', require('./routes/log'));
 //route with express
 app.use('/api/test', function(req, res){
 	res.send("hello world");

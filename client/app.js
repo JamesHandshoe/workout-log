@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	var WorkoutLog = (function($, undefined){
 		var API_BASE = "http://localhost:3000/api/";
@@ -27,6 +26,14 @@ $(document).ready(function(){
 		if ($(this).hasClass('disabled') && !token) {
 			e.preventDefault();
 			return false;
+		}
+	});
+
+	//bind tab change events
+	$('a[data-toggle=tab]').on('shown.bs.tab', function(e) {
+		var target = $(e.target).attr("href");
+		if (target === "#log") {
+			WorkoutLog.log.setDefinitions();
 		}
 	});
 

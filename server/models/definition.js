@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
 
 	return sequelize.define('definition', {
 
-		description: DataTypes.STRING,
+		description: { type: DataTypes.STRING, unique: true },
 		logType: DataTypes.STRING,
 		owner: DataTypes.INTEGER
 		
