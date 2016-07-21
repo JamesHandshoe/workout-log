@@ -2,7 +2,7 @@
 var Sequelize = require('sequelize');
 
 //connects to postgres gives location and what time of db client
-var sequelize = new Sequelize('workoutlog', 'postgres', 'Jsb59733', {
+var sequelize = new Sequelize('workoutlog', 'postgres', process.env.DB_PASSWORD, {
 	host: 'localhost',
 	dialect: 'postgres'
 });
